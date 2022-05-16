@@ -1,13 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
 import Home from './components/Home';
+import FavList from './components/FavList';
+import Navbar from './components/Navbar';
+import { Routes, Route } from "react-router-dom";
+
 
 function App() {
   return (
     <>
-      <h1>Liverpool YNWA FC</h1>
-      <h2>Movie Trending List</h2>
-      <Home/>
+      <h1>Welcome to NETFLIX CLONE!</h1>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />       
+        <Route path="favMovie" element={<FavList />} />
+      </Routes>
     </>
 
   );
